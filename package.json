@@ -6,6 +6,7 @@
     "react-scripts": "1.0.17"
   },
   "dependencies": {
+    "json-server": "^0.12.1",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "react-redux": "^5.0.6",
@@ -15,6 +16,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "dev-server": "json-server -p 8080 db.json"
   }
 }
