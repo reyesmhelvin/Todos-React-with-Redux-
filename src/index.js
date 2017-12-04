@@ -4,15 +4,11 @@ import {Provider} from 'react-redux'
 import './index.css';
 import App from './App';
 import registerServiceWorker from './registerServiceWorker';
-import store from './store';
-import {updateCurrent} from './reducers/todo';
-import {bindActionCreators} from 'redux';
-
-const action = bindActionCreators({updateCurrent}, store.dispatch)
+import store from './store'
 
 ReactDOM.render(
 <Provider store={store}>
-    <App changeCurrent={action.updateCurrent}/>
+    <App />
 </Provider>
 , document.getElementById('root'));
 
