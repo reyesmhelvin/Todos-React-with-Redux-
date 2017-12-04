@@ -3,13 +3,18 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import registerServiceWorker from './registerServiceWorker';
+import store from './store'
 
-const state = {
-    todos: [
-        {id: 1, name:"Create Static UI", isComplete: true},
-        {id: 2, name:"Create Initial State", isComplete: true},
-        {id: 3, name:"Use State To Render UI", isComplete: true}
-    ]
+const render = () => {
+    const state = store.getState()
+    ReactDOM.render(<App {...state}/>, document.getElementById('root'));
 }
-ReactDOM.render(<App todos={state.todos}/>, document.getElementById('root'));
+render()
+
+store.subscribe(render)
+
+setTimeout(() => {
+    store.dispatch({type: 'TODO_ADD', payload: {id: 4, name: 'New Todo', isComplete: false}})
+}, 1000)
+
 registerServiceWorker();
