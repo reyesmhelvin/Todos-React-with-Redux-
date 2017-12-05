@@ -25,10 +25,16 @@
 
 .todo-app {
   /* border: 1px solid red; */
-  padding: 20px;
+  padding: 35px;
 }
 
 ul {
   list-style-type: none;
   padding: 0px;
+}
+
+.message {
+  background: deepskyblue;
+  padding: 5px;
+  color: white;
 }
