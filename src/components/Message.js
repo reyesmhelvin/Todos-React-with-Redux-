@@ -1,7 +1,10 @@
 import React from 'react'
+import {connect} from 'react-redux'
 
 const Message = ({message}) => {
     return message ? <span class="message">{message}</span> : null;
 }
 
-export default Message;
+export default connect(
+    (state) => ({message: state.message})
+)(Message);
