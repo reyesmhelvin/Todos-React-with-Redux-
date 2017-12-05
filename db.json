@@ -14,6 +14,11 @@
       "id": 3,
       "name": "Handle state changes with redux",
       "isComplete": false
+    },
+    {
+      "name": "Test ",
+      "isComplete": false,
+      "id": 4
     }
   ]
 }
