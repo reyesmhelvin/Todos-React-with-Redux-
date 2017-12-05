@@ -38,3 +38,12 @@ ul {
   padding: 5px;
   color: white;
 }
+
+span.delete-item button {
+  color: red;
+  visibility: hidden;
+  background: white;
+}
+li:hover span.delete-item button {
+  visibility: visible;
+}

@@ -11,14 +11,9 @@
       "isComplete": true
     },
     {
-      "id": 3,
-      "name": "Handle state changes with redux",
-      "isComplete": false
-    },
-    {
-      "name": "Ihulog si Sandy sa roof top",
+      "name": "Patayin si Sandy",
       "isComplete": false,
-      "id": 4
+      "id": 3
     }
   ]
 }
