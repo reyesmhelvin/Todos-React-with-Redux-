@@ -44,6 +44,12 @@ span.delete-item button {
   visibility: hidden;
   background: white;
 }
+
 li:hover span.delete-item button {
   visibility: visible;
+}
+
+a {
+  padding-left: 2px;
+  padding-right: 2px;
 }

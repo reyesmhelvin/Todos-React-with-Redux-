@@ -4,7 +4,7 @@ import {fetchTodos, toggleTodo, deleteTodo} from '../reducers/todo'
 
 const TodoItem = ({id, name, isComplete, toggleTodo, deleteTodo}) => (
     <li>
-        <span class="delete-item">
+        <span className="delete-item">
             <button onClick={() => deleteTodo(id)}>X</button>
         </span>
         <input type="checkbox" checked={isComplete} onChange={() => toggleTodo(id)}/> {name}
@@ -20,11 +20,12 @@ class TodoList extends Component {
        return (
             <div className="todo-list">
                 <ul>
-                    {this.props.todos.map(todo => < TodoItem {...todo} 
-                                                        key={todo.id} 
-                                                        toggleTodo={this.props.toggleTodo} 
-                                                        deleteTodo={this.props.deleteTodo}/>)
-                    }
+                    {this.props.todos.map(
+                        todo => < TodoItem {...todo} 
+                            key={todo.id} 
+                            toggleTodo={this.props.toggleTodo} 
+                            deleteTodo={this.props.deleteTodo}/>
+                        )}
                 </ul>
             </div>
         )
