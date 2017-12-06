@@ -1,8 +1,8 @@
 import React, {Component} from "react";
 import {connect} from "react-redux"
-import {fetchTodos, toggleTodo, deleteTodo} from '../reducers/todo'
+import {fetchTodos, toggleTodo, deleteTodo, getVisibleTodos} from '../reducers/todo'
 
-const TodoItem = ({id, name, isComplete, toggleTodo, deleteTodo}) => (
+const TodoItem = ({id, name, isComplete, toggleTodo, deleteTodos}) => (
     <li>
         <span className="delete-item">
             <button onClick={() => deleteTodo(id)}>X</button>
@@ -33,6 +33,6 @@ class TodoList extends Component {
 } 
 
 export default connect(
-    (state) => ({todos: state.todo.todos}),
+    (state, ownProps) => ({todos: getVisibleTodos(state.todo.todos, ownProps.filter)}),
     {fetchTodos, toggleTodo, deleteTodo}
 )(TodoList)
